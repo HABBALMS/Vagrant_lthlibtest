@@ -1,0 +1,15 @@
+#
+# Add user libsftp for EZproxy management.
+#
+  - name: Add libsftp groups
+    group:
+      name: libsftp
+      state: present
+  
+  - name: Add libsftp user
+    user:
+      name: libsftp
+      comment: sftp user
+      state: present
+      password_lock: yes
+  

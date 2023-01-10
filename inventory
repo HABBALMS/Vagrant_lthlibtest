@@ -1,0 +1,7 @@
+master				ansible_ssh_host=192.168.50.10		ansible_connection=local
+lthlibsftp		ansible_ssh_host=192.168.50.11
+lthlibprod		ansible_ssh_host=192.168.50.12
+
+[nodes]
+lthlibprod
+lthlibsftp
