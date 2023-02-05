@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
         vb.memory = 2048
         vb.cpus = 2
     end
-    lthlibsftp.vm.network "private_network", ip: "192.168.50.11"
+    lthlibsftp.vm.network "private_network", ip: "192.168.56.11"
   end
 
   # Define the second node.
@@ -30,13 +30,13 @@ Vagrant.configure("2") do |config|
         vb.memory = 2048
         vb.cpus = 2
     end
-    lthlibprod.vm.network "private_network", ip: "192.168.50.12"
+    lthlibprod.vm.network "private_network", ip: "192.168.56.12"
   end
 
 # Define the master node.
   config.vm.define "master", primary: true do |master|
     master.vm.hostname = "master"
-    master.vm.network "private_network", ip: "192.168.50.10"
+    master.vm.network "private_network", ip: "192.168.56.10"
     master.vm.network "forwarded_port", guest: 9090, host: 9090
     master.vm.provider :virtualbox do |vb|
         vb.memory = 2048
