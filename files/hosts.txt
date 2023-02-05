@@ -1,5 +1,5 @@
 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
-192.168.50.10   master
-192.168.50.11   lthlibsftp
-192.168.50.12   lthlibprod
+192.168.56.10   master
+192.168.56.11   lthlibsftp
+192.168.56.12   lthlibprod
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6

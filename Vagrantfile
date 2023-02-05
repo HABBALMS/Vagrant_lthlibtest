@@ -37,17 +37,17 @@ Vagrant.configure("2") do |config|
   config.vm.define "master", primary: true do |master|
     master.vm.hostname = "master"
     master.vm.network "private_network", ip: "192.168.56.10"
-    master.vm.network "forwarded_port", guest: 9090, host: 9090
+    # master.vm.network "forwarded_port", guest: 9090, host: 9090
     master.vm.provider :virtualbox do |vb|
         vb.memory = 2048
         vb.cpus = 2
     end
     master.vm.provision :ansible_local do |ansible|
-      ansible.verbose        = false
+      ansible.verbose        = true
       ansible.install        = true
       ansible.limit          = "all"
       ansible.inventory_path = "inventory"
-      ansible.playbook       = "lib_vms.yml"
+      ansible.playbook       = "lib_vms.yaml"
     end
   end
 end
