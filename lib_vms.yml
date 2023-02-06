@@ -57,4 +57,4 @@
     #   # Add user and group for libsftp.
     #   #
     - name: Add liblocal group
-      include: tasks/libsftp_user.yml
+      include_task: tasks/libsftp_user.yml

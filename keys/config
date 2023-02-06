@@ -1,11 +1,11 @@
 Host master
-    HostName 192.168.50.10
+    HostName 192.168.56.10
     StrictHostKeyChecking no
 
 Host lthlibsftp
-    HostName 192.168.50.11
+    HostName 192.168.56.11
     StrictHostKeyChecking no
 
 Host lthlibprod
-    HostName 192.168.50.12
+    HostName 192.168.56.12
     StrictHostKeyChecking no
