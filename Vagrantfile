@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "lthlibsftp" do |lthlibsftp|
     lthlibsftp.vm.hostname = "lthlibsftp"
     lthlibsftp.vm.provider :virtualbox do |vb|
-        vb.memory = 2048
+        vb.memory = 3072
         vb.cpus = 2
     end
     lthlibsftp.vm.network "private_network", ip: "192.168.56.11"
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "lthlibprod" do |lthlibprod|
     lthlibprod.vm.hostname = "lthlibprod"
     lthlibprod.vm.provider :virtualbox do |vb|
-        vb.memory = 2048
+        vb.memory = 3072
         vb.cpus = 2
     end
     lthlibprod.vm.network "private_network", ip: "192.168.56.12"
@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
     master.vm.network "private_network", ip: "192.168.56.10"
     # master.vm.network "forwarded_port", guest: 9090, host: 9090
     master.vm.provider :virtualbox do |vb|
-        vb.memory = 2048
+        vb.memory = 3072
         vb.cpus = 2
     end
     master.vm.provision :ansible_local do |ansible|
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
       ansible.install        = true
       ansible.limit          = "all"
       ansible.inventory_path = "inventory"
-      ansible.playbook       = "lib_vms.yaml"
+      ansible.playbook       = "lib_vms.yml"
     end
   end
 end
