@@ -50,11 +50,5 @@
         group: root
         mode: 0400
 
-    # - hosts: lthlibsftp
-    #   become: true
-    #   become_method: sudo
-    #   #
-    #   # Add user and group for libsftp.
-    #   #
     - name: Add liblocal group
-      include_task: tasks/libsftp_user.yml
+      import_tasks: tasks/libsftp_user.yml
