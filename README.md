@@ -1,6 +1,6 @@
 # LibSFTP
 
-## Tesing Ansible
+## Testing Ansible
 
 Testing Ansible from the master node
 
